@@ -1,0 +1,14 @@
+image: markhobson/maven-chrome:jdk-11
+
+stages:
+  - test
+
+cache:
+  paths:
+    - .m2/repository/
+    - target/
+
+test:
+  stage: test
+  script:
+    - mvn test

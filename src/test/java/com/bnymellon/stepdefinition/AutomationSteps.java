@@ -7,7 +7,8 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 
@@ -67,7 +68,8 @@ public class AutomationSteps implements En {
         });
 
         Before(() -> {
-            driver = new EdgeDriver();
+            ChromeOptions options = new ChromeOptions().setHeadless(true);
+            driver = new ChromeDriver(options);
             actions = new Actions(driver);
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
             driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
