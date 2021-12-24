@@ -1,5 +1,5 @@
-@ui
-Feature:
+@Ui
+Feature: Test - GOV.UK
 
   Scenario: Check Tax and MOT - Taxed
     Given a user opens "https://www.gov.uk/check-mot-status"

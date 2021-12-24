@@ -1,4 +1,4 @@
-package utils;
+package com.bnymellon.utils;
 
 import net.masterthought.cucumber.Configuration;
 import net.masterthought.cucumber.ReportBuilder;
