@@ -5,10 +5,10 @@ import io.cucumber.java8.Scenario;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Assert;
 
 import java.time.Duration;
@@ -76,7 +76,7 @@ public class AutomationSteps implements En {
         });
 
         AfterStep((Scenario scenario) -> {
-            final byte[] screenshot = ((RemoteWebDriver) driver).getScreenshotAs(OutputType.BYTES);
+            final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
             scenario.attach(screenshot, "image/png", LocalDateTime.now().toString());
         });
 
