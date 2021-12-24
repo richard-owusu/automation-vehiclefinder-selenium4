@@ -69,7 +69,6 @@ public class AutomationSteps implements En {
         });
 
         Before(() -> {
-            WebDriverManager.edgedriver().setup();
             driver = new EdgeDriver();
             actions = new Actions(driver);
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
