@@ -1,12 +1,11 @@
 package com.bnymellon.runner;
 
+import com.bnymellon.utils.Helper;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
-import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
-import com.bnymellon.utils.Helper;
 
 
 @CucumberOptions(
@@ -32,7 +31,7 @@ public class Runner extends AbstractTestNGCucumberTests {
     }
 
     @BeforeTest
-    public void beforeAllScenarios(){
+    public void beforeAllScenarios() {
         System.setProperty("webdriver.edge.driver", driverPath + "msedgedriver.exe");
     }
 
