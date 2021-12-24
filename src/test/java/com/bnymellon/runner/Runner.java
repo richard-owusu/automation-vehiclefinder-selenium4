@@ -9,7 +9,7 @@ import com.bnymellon.utils.Report;
 
 @CucumberOptions(
         features = {"src/test/resources"},
-        glue = {"com/bnymellon/stepdefinition"},
+        glue = {"com.bnymellon.stepdefinition"},
         tags = "@Ui",
         plugin = {"pretty", "html:target/html/report", "json:target/json/cucumber.json"},
         publish = true
